@@ -22,15 +22,15 @@ body{
   // font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   // background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
 .bg-img{
-  background: url('https://ctcatconnection.org/wp-content/uploads/2017/07/Cat-White-Background-Images.jpg') center no-repeat;
     height: 800px;
-      
-    filter: grayscale;
+    height: 100vh;
 }
   .header{
-      background: white;
+    background: url('https://ctcatconnection.org/wp-content/uploads/2017/07/Cat-White-Background-Images.jpg') center no-repeat;
       display: block;
       padding: 20px 0;
+      height: 100vh;
+
       .nav{
         
         width: 100%;
@@ -44,17 +44,15 @@ body{
           margin-left: 60px;
           margin-right: 120px;
           display: inline-block;
-          letter-spacing: 0px;
+          letter-spacing: -8px;
         }
         .links{
           text-align: center;
           display: inline-block;
-          
           a {
-            // padding: 20px 20px;
             border-bottom: 1px solid white;
             &:hover{
-            border-bottom: 1px solid $companyColor;
+            border-bottom: 1px solid $accentColor;
             transition: all .5s ease-in-out;
 
           }
@@ -63,6 +61,7 @@ body{
           
           a{
             font-size: 12px;
+            font-weight: 400;
             color: grey;
             text-decoration: none;
             text-transform: uppercase;
@@ -72,7 +71,7 @@ body{
         .new-btn{
           display: inline-block;
           color: $accentColor;
-          background: rgba(247, 157, 2, 0.269);
+          background: rgba(247, 157, 2, 0.208);
           padding:10px 10px;
           border-radius: 50px;
           float: right;
@@ -99,8 +98,7 @@ body{
 		      linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
 		      $dot-color;
 	        background-size: $dot-space $dot-space;
-          // background: rgb(0, 0, 160);
-          height: 800px;
+          height: 100vh;
           width: 200px;
           margin-top: -60px;
           right: 0;
@@ -116,7 +114,6 @@ body{
             text-decoration: none;
             text-transform: capitalize;
             border-bottom: 1px solid grey;
-
           }
           .explore {
               position: absolute;
@@ -127,31 +124,26 @@ body{
               transform: rotate(90deg);
               color: rgba(255, 255, 255, 0.728);
               text-transform: uppercase;
-              // background: red;
               width: 200px;
               bottom: 100px;
-              // height: 700px;
-              // margin-bottom: 600px;
               cursor: pointer;
               letter-spacing: 4px;
               &:hover{
                 transition: all .6s ease-in-out;
                 color: $accentColor;
               }
-
-
-          
           }
         }
       }
   }
   .welcome-text {
     background: rgba(255, 255, 255, 0.5555);
-    height: 350px;
+    height: 300px;
     width: 550px;
     position: absolute;
     right: 220px;
-    top: 470px;
+    // top: 470px;
+    bottom: 0;
     border-radius: 10px;
     h6{
       padding: 30px 80px 0 80px;
@@ -170,6 +162,8 @@ body{
       span{
         color: $companyColor;
         font-family: 'Lexend Giga', sans-serif;
+        letter-spacing: -8px;
+        font-weight: 400;
       }
     }
     .btn{
@@ -179,8 +173,7 @@ body{
       padding:8px 10px;
       border-radius: 50px;
       float: right;
-      margin-right: 160px;
-      margin-top: 13px;
+      margin-right: 60px;
       font-size: 12px;
       text-transform: uppercase;
       font-weight: 600;
@@ -188,6 +181,10 @@ body{
       -webkit-box-shadow: -2px 4px 96px -26px rgba(0,0,0,0.75);
       -moz-box-shadow: -2px 4px 96px -26px rgba(0,0,0,0.75);
       box-shadow: -2px 4px 96px -26px rgba(0,0,0,0.75);
+      &:hover{
+        transition: all .6s ease-in-out;
+        color: $accentColor;
+      }
       a{
         text-decoration: none;
             border-radius: 50px;
@@ -198,12 +195,7 @@ body{
       i {
         background: rgb(1, 1, 103);
         padding: 8px 8px;
-        // display: inline-block;
         border-radius: 50%;
-        // color: white;
-        // right: 0;
-        // position: relative;
-        // margin-left: 15px;
       }
     }
   }
@@ -211,12 +203,26 @@ body{
     margin: 0 auto;
     text-align: center;
     width: 1000px;
-    
-
+    position: relative;
+    // .circle{
+    //   background: transparent;
+    //   height: 150px;
+    //   width: 150px;
+    //   border-radius: 50%;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 170px;
+    //   border: 20px solid $accentColor;
+    // }
     .service-box{
-    // display: flex;
-    // flex-direction: row; 
-    padding: 25px 0;
+      padding: 25px 0;
+      // opacity: 0;
+      // transform: translateY(20px); 
+      // transition: all .5s ease-in-out;
+      // .appear{
+      //   opacity: 1;
+      //   transform: translateY(0)
+      // }
       .title{
         padding: 50 50px 50px 50px;
         h6{
@@ -294,7 +300,10 @@ body{
     .box6{
       border-left: 1px solid rgba(128, 128, 128, 0.25);
     }
+    
   }
+
+
   .client-bg{
     background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
 		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
@@ -370,17 +379,20 @@ body{
           a{
             padding: 7px;
             margin-top: 80px !important;
+            img {
+              filter: grayscale(1)
+            }
           }
         }
       }
       .card{
         position:absolute; 
         padding:50px 32px;
-        clip-path: circle(10% at 90% 19%);
+        clip-path: circle(6% at 90% 19%);
         transition: all ease-in-out .3s;
         background-color:$accentColor;
-        right: -20px;
-        top: -30px;
+        right: 0px;
+        top: 0px;
         &__infoicon{
           position:absolute;
           top:28px;
@@ -431,101 +443,157 @@ body{
                       0px 0px 0px 4px rgba(0,0,0,0.2);
         }
       }
-      // .info-circle{
-      //   position: absolute;
-      //   height: 80px;
-      //   width: 80px;
-      //   border-radius: 50%;
-      //   color: white;
-      //   background: $accentColor;
-      //   font-size: 34px;
-      //   left: -25px;
-      //   top: -40px;
-      //   i {
-      //    margin-top: 25%; 
-      //   }
-      // }
     }
   }
   .review{
-    position: relative;
+    
     height: 850px;
+    margin: 0 auto;
+    display: block;
+    padding: 40px 0 0 0;
     .container{
       width: 1000px;
-      padding: 80px 0;
-      .rotate-text{
-              position: absolute;
-              -webkit-transform: rotate(270deg);
-              -moz-transform: rotate(270deg);
-              -o-transform: rotate(270deg);
-              -ms-transform: rotate(270deg);
-              transform: rotate(270deg);
-              top: 320px;
-              left: 0px;
-              h6{
-                padding: 30px 80px 0 80px;
-                font-size: 12px;
-                color: grey;
-                span{
-                  color: $companyColor;
-                  margin-right: 8px;
-                }
-              }
-              h2{
-                font-size: 2.5rem;
-                text-align: left;
-                font-weight: 700;
-              }
-      }
-      .process {
-        display: flex;
-        width: 100%;
-        padding: 4% 2%;
-        box-sizing: border-box;
-        height: 700px;
-
+      padding: 80px 0 0 0;
+      display: block;
+      .process-box{
+        position: relative;
+        margin-left: 100px;
+        display: inline-block;
+        .rotate-text{
+          position: absolute;
+          width: 400px;
+          height: 200px;
+          -webkit-transform: rotate(270deg);
+          -moz-transform: rotate(270deg);
+          -o-transform: rotate(270deg);
+          -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+          top: 180px;
+          left: -180px;
+          
+          h6{
+            padding: 30px 80px 0 80px;
+            font-size: 12px;
+            color: grey;
+            span{
+              color: $companyColor;
+              margin-right: 8px;
+            }
+          }
+          h2{
+            font-size: 2.5rem;
+            text-align: left;
+            font-weight: 700;
+          }
+        }
+        .process {
+          margin-left: 40px;
+          display: flex;
+          width: 100%;
+          padding: 4% 2%;
+          box-sizing: border-box;
+          height: 650px;
+            .box {
+              flex: 1;
+              overflow: hidden;
+              transition: .5s;
+              margin: 0 2%;
+              // box-shadow: 0 20px 30px $accentColor;
+              line-height: 0;
+              border-radius: 5px;
+            }
+            
+            .box > img {
+              width: 200%;
+              height: calc(100% - 10vh);
+              object-fit: cover; 
+              transition: .5s;
+              border-radius: 5px;
+            }
+      
+            .box:hover { flex: 1 1 50%; }
+            .box:hover > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+    }
+  }
+}
+  .brand{
+    background: rgb(244, 244, 244);
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    // .circle{
+    //   background: transparent;
+    //   height: 100px;
+    //   width: 100px;
+    //   border-radius: 50%;
+    //   position: absolute;
+    //   right: -40px;
+    //   top: -70px;
+    //   border: 10px solid $accentColor;
+    // }
+    .container{
+      width: 100%;
+      display: block;
+      position: relative;
+      width: 1000px;
+      .img-container{
+        position: absolute;
+        // display: inline-block;
+        float: left;
+        left: 40px;
+        img{
+        width: 400px;
+        }
       }
       
-      .box {
-        flex: 1;
-        overflow: hidden;
-        transition: .5s;
-        margin: 0 2%;
-        // box-shadow: 0 20px 30px $accentColor;
-        line-height: 0;
-        border-radius: 5px;
+      .branding{
+        position: absolute;
+        padding: 80px 0 0 0;
+        display: inline-block;
+        text-align: right;
+        height: 400px;
+        // width: 450px;
+        
+        h6{
+          // padding: 30px 80px 0 80px;
+          font-size: 12px;
+          color: grey;
+          margin-bottom: 20px;
+          span{
+            color: $companyColor;
+            margin-right: 8px;
+          }
+        }
+        h2{
+          font-size: 2.5rem;
+          text-align: left;
+          font-weight: 700;
+          margin-bottom: 2rem;
+          text-align: right;
+        }
       }
-      
-      .box > img {
-        width: 200%;
-        height: calc(100% - 10vh);
-        object-fit: cover; 
-        transition: .5s;
-        border-radius: 5px;
-      }
-      
-      .box > span {
-        font-size: 3.8vh;
-        display: block;
-        text-align: center;
-        height: 10vh;
-        line-height: 2.6;
-        border-radius: 5px;
-
-      }
-      
-      .box:hover { flex: 1 1 50%; }
-      .box:hover > img {
-        width: 100%;
-        height: 100%;
-      }
-       
     }
   }
   .footer{
     background: $companyColor;
     height: 300px;
     padding: 30px;
+    position: relative;
+    .circle{
+      background: $accentColor;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      position: absolute;
+      left: -40px;
+      top: -40px;
+      // border: 1px solid rgba(218, 138, 1, 0.7/35);
+    }
     .container{
       width: 1000px;
       color: white;
