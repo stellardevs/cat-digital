@@ -150,6 +150,8 @@ body{
       font-size: 11px;
       // color: grey;
       span{
+        font-family: 'Lexend Giga', sans-serif;
+        letter-spacing: -1px;
         color: $companyColor;
         margin-right: 8px;
       }
@@ -225,6 +227,8 @@ body{
           color: grey;
           margin-bottom: 16px;
           span{
+            font-family: 'Lexend Giga', sans-serif;
+            letter-spacing: -1px;
             color: $companyColor;
             margin-right: 8px;
           }
@@ -381,6 +385,8 @@ body{
             margin-bottom: 16px;
             margin-top: 1rem;
             span{
+              font-family: 'Lexend Giga', sans-serif;
+              letter-spacing: -1px;
               color: white;
               margin-right: 8px;
             }
@@ -430,6 +436,8 @@ body{
         font-size: 13px;
         color: grey;
         span{
+          font-family: 'Lexend Giga', sans-serif;
+          letter-spacing: -1px; 
           color: $companyColor;
           margin-right: 8px;
         }
@@ -499,6 +507,8 @@ body{
             font-size: 12px;
             color: grey;
             span{
+              font-family: 'Lexend Giga', sans-serif;
+              letter-spacing: -1px;
               color: $companyColor;
               margin-right: 8px;
             }
@@ -589,6 +599,8 @@ body{
           color: grey;
           margin-bottom: 20px;
           span{
+            font-family: 'Lexend Giga', sans-serif;
+            letter-spacing: -1px;
             color: $companyColor;
             margin-right: 8px;
           }
@@ -850,6 +862,8 @@ body{
       font-size: 11px;
       // color: grey;
       span{
+        font-family: 'Lexend Giga', sans-serif;
+        letter-spacing: -1px;
         color: $companyColor;
         margin-right: 8px;
       }
@@ -917,6 +931,8 @@ body{
           color: grey;
           margin-bottom: 16px;
           span{
+            font-family: 'Lexend Giga', sans-serif;
+            letter-spacing: -1px;
             color: $companyColor;
             margin-right: 8px;
           }
@@ -994,19 +1010,19 @@ body{
     .box4{
       border-right: 0;
       border-bottom: 1px solid rgba(128, 128, 128, 0.25);
-
+      height: 313px !important;
     }
     .box6{
       border-right: 0;
       border-bottom: 0;
       border-left: none;
+      // height: 313px !important;
     }
-  .box5 {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
-
-  }
-    
-  }
+    .box5 {
+      border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+      height: 313px !important;
+      }   
+    }
 
 
   .client-bg{
@@ -1025,6 +1041,7 @@ body{
       width: 100%;
       display: block;
         .clients{
+          margin-top: 40px;
         height: 100px;
         padding: 10px;
         img{
@@ -1058,7 +1075,7 @@ body{
         .trans-box{
           position: relative;
           display: inline-block;
-          padding: 40px 55px;
+          padding: 0 55px 20px 55px;
           height: 400px;
           width: 100%;
           right: 0;
@@ -1070,6 +1087,8 @@ body{
             margin-bottom: 16px;
             margin-top: 1rem;
             span{
+              font-family: 'Lexend Giga', sans-serif;
+               letter-spacing: -1px;
               color: white;
               margin-right: 8px;
             }
@@ -1116,6 +1135,8 @@ body{
         font-size: 13px;
         color: grey;
         span{
+          font-family: 'Lexend Giga', sans-serif;
+          letter-spacing: -1px;
           color: $companyColor;
           margin-right: 8px;
         }
@@ -1186,6 +1207,8 @@ body{
             font-size: 12px;
             color: grey;
             span{
+              font-family: 'Lexend Giga', sans-serif;
+             letter-spacing: -1px;
               color: $companyColor;
               margin-right: 8px;
             }
@@ -1264,7 +1287,7 @@ body{
       display: block;
       position: absolute;
       height: 600px;
-      padding: 10px;
+      padding: 20px;
       .img-container{
         position: relative;
         display: block;
@@ -1289,6 +1312,8 @@ body{
           color: grey;
           margin-bottom: 10px;
           span{
+            font-family: 'Lexend Giga', sans-serif;
+            letter-spacing: -1px;
             color: $companyColor;
             margin-right: 8px;
           }
@@ -1316,7 +1341,6 @@ body{
       position: absolute;
       left: -40px;
       top: -40px;
-      // border: 1px solid rgba(218, 138, 1, 0.7/35);
     }
     .container{
       width: 100%;
@@ -1325,77 +1349,84 @@ body{
         font-family: 'Nunito', sans-serif;
         display: flex;
         flex-direction: column;
-        //justify-content: center;
         height: 300px;
         max-width: 1600px;
         padding: 0 15px;
         margin: 0 auto;
               // colors
-      $input-background: $companyColor;
-      $input-text-inactive: #7881A1;
-      $input-text-active: $accentColor;
+        $input-background: $companyColor;
+        $input-text-inactive: #7881A1;
+        $input-text-active: $accentColor;
 
       // gradient animation
       @keyframes gradient { 
         0%{background-position:0 0}
         100%{background-position:100% 0}
-}
+      }
 
-.webflow-style-input {
-  font-family: 'Nunito', sans-serif;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  border-radius: 2px;
-  padding: 1.4rem 2rem 1.6rem;
-  background: $input-background;
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: 999;
-    height: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    background-position: 0% 0%;
-    background: linear-gradient(to right, rgb(235, 124, 124), $accentColor, rgb(245, 249, 5), rgb(139, 218, 50), rgb(233, 148, 0), #57E6E6);
-    background-size: 500% auto;
-    animation: gradient 3s linear infinite;
-  }
-}
+        .webflow-style-input {
+          font-family: 'Nunito', sans-serif;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+          border-radius: 2px;
+          padding: 1.4rem 2rem 1.6rem;
+          background: $input-background;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 999;
+            height: 2px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            background-position: 0% 0%;
+            background: linear-gradient(to right, rgb(235, 124, 124), $accentColor, rgb(245, 249, 5), rgb(139, 218, 50), rgb(233, 148, 0), #57E6E6);
+            background-size: 500% auto;
+            animation: gradient 3s linear infinite;
+          }
+        }
 
-.webflow-style-input input {
-  flex-grow: 1;
-  color: $input-text-active;
-  font-size: 1.2rem;
-  font-family: 'Nunito', sans-serif;
-  line-height: 2.4rem;
-  vertical-align: middle;
-  &::-webkit-input-placeholder {
-    color: $input-text-inactive;
-  }
-}
+        .webflow-style-input input {
+          flex-grow: 1;
+          color: $input-text-active;
+          font-size: 1.2rem;
+          font-family: 'Nunito', sans-serif;
+          line-height: 2.4rem;
+          vertical-align: middle;
+          &::-webkit-input-placeholder {
+            color: $input-text-inactive;
+          }
+        }
 
-.webflow-style-input button {
-  color:  $input-text-inactive;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  vertical-align: middle;
-  transition: color .25s;
-  &:hover {
-    color: $input-text-active;
-  }
-}
+        .webflow-style-input button {
+          color:  $input-text-inactive;
+          font-size: 1.2rem;
+          line-height: 2.4rem;
+          vertical-align: middle;
+          transition: color .25s;
+          &:hover {
+            color: $input-text-active;
+          }
+        }
       }
       .social-links{
         padding: 40px 0 30px;
         color: white;
+        // padding: 10px 5px;
         font-size: 1.6rem;
+        i {
+          padding: 10px;
+          cursor: pointer;
+          &:hover{
+            color: $accentColor;
+          }
+        }
       }
     }
   }

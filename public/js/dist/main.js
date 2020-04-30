@@ -1,91 +1,63 @@
-function scrollAppear() {
-	var serviceContainer = document.querySelector('.services-container');
-	var introPosition = serviceContainer.getBoundingClientRect().top;
-	var midContainer = document.querySelector('.mid-container');
-	var midPosition = midContainer.getBoundingClientRect().top;
-	var processBox = document.querySelector('.process');
-	var processPosition = processBox.getBoundingClientRect().top;
-	var brandText = document.querySelector('.brand-text');
-	var brandPosition = brandText.getBoundingClientRect().top;
-	var screenPosition = window.innerHeight / 1.4;
-
-	if (introPosition < screenPosition) {
-		serviceContainer.classList.add('appear');
-	}
-	if (midPosition < screenPosition) {
-		midContainer.classList.add('appear');
-	}
-	if (processPosition < screenPosition) {
-		processBox.classList.add('appear');
-	}
-	if (brandPosition < screenPosition) {
-		brandText.classList.add('appear');
-	}
-}
-// add event listener
-
-window.addEventListener('scroll', scrollAppear);
-
-// (function(modules) {
-//     var installedModules = {};
-//     function __webpack_require__(moduleId) {
-//         if (installedModules[moduleId]) return installedModules[moduleId].exports;
-//         var module = installedModules[moduleId] = {
-//             i: moduleId,
-//             l: false,
-//             exports: {}
-//         };
-//         modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-//         module.l = true;
-//         return module.exports;
-//     }
-//     __webpack_require__.m = modules;
-//     __webpack_require__.c = installedModules;
-//     __webpack_require__.d = function(exports, name, getter) {
-//         if (!__webpack_require__.o(exports, name)) Object.defineProperty(exports, name, {
-//             enumerable: true,
-//             get: getter
-//         });
-//     };
-//     __webpack_require__.r = function(exports) {
-//         if ("undefined" !== typeof Symbol && Symbol.toStringTag) Object.defineProperty(exports, Symbol.toStringTag, {
-//             value: "Module"
-//         });
-//         Object.defineProperty(exports, "__esModule", {
-//             value: true
-//         });
-//     };
-//     __webpack_require__.t = function(value, mode) {
-//         if (1 & mode) value = __webpack_require__(value);
-//         if (8 & mode) return value;
-//         if (4 & mode && "object" === typeof value && value && value.__esModule) return value;
-//         var ns = Object.create(null);
-//         __webpack_require__.r(ns);
-//         Object.defineProperty(ns, "default", {
-//             enumerable: true,
-//             value: value
-//         });
-//         if (2 & mode && "string" != typeof value) for (var key in value) __webpack_require__.d(ns, key, function(key) {
-//             return value[key];
-//         }.bind(null, key));
-//         return ns;
-//     };
-//     __webpack_require__.n = function(module) {
-//         var getter = module && module.__esModule ? function() {
-//             return module["default"];
-//         } : function() {
-//             return module;
-//         };
-//         __webpack_require__.d(getter, "a", getter);
-//         return getter;
-//     };
-//     __webpack_require__.o = function(object, property) {
-//         return Object.prototype.hasOwnProperty.call(object, property);
-//     };
-//     __webpack_require__.p = "";
-//     return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
-// })({
-//     "./assets/js/main.js": function(module, exports) {
-//         eval("function scrollAppear() {\n  var serviceBox = document.querySelector('.service-box');\n  var servicePosition = serviceBox.getBoundingClientRect().top;\n  console.log('hello');\n}\n\n//# sourceURL=webpack:///./assets/js/main.js?");
-//     }
-// });
+(function(modules) {
+    var installedModules = {};
+    function __webpack_require__(moduleId) {
+        if (installedModules[moduleId]) return installedModules[moduleId].exports;
+        var module = installedModules[moduleId] = {
+            i: moduleId,
+            l: false,
+            exports: {}
+        };
+        modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+        module.l = true;
+        return module.exports;
+    }
+    __webpack_require__.m = modules;
+    __webpack_require__.c = installedModules;
+    __webpack_require__.d = function(exports, name, getter) {
+        if (!__webpack_require__.o(exports, name)) Object.defineProperty(exports, name, {
+            enumerable: true,
+            get: getter
+        });
+    };
+    __webpack_require__.r = function(exports) {
+        if ("undefined" !== typeof Symbol && Symbol.toStringTag) Object.defineProperty(exports, Symbol.toStringTag, {
+            value: "Module"
+        });
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        });
+    };
+    __webpack_require__.t = function(value, mode) {
+        if (1 & mode) value = __webpack_require__(value);
+        if (8 & mode) return value;
+        if (4 & mode && "object" === typeof value && value && value.__esModule) return value;
+        var ns = Object.create(null);
+        __webpack_require__.r(ns);
+        Object.defineProperty(ns, "default", {
+            enumerable: true,
+            value: value
+        });
+        if (2 & mode && "string" != typeof value) for (var key in value) __webpack_require__.d(ns, key, function(key) {
+            return value[key];
+        }.bind(null, key));
+        return ns;
+    };
+    __webpack_require__.n = function(module) {
+        var getter = module && module.__esModule ? function() {
+            return module["default"];
+        } : function() {
+            return module;
+        };
+        __webpack_require__.d(getter, "a", getter);
+        return getter;
+    };
+    __webpack_require__.o = function(object, property) {
+        return Object.prototype.hasOwnProperty.call(object, property);
+    };
+    __webpack_require__.p = "";
+    return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
+})({
+    "./assets/js/main.js": function(module, exports) {
+        eval("function scrollAppear() {\n  var serviceContainer = document.querySelector('.services-container');\n  var introPosition = serviceContainer.getBoundingClientRect().top;\n  var midContainer = document.querySelector('.mid-container');\n  var midPosition = midContainer.getBoundingClientRect().top;\n  var processBox = document.querySelector('.process');\n  var processPosition = processBox.getBoundingClientRect().top;\n  var brandText = document.querySelector('.brand-text');\n  var brandPosition = brandText.getBoundingClientRect().top;\n  var screenPosition = window.innerHeight / 1.4;\n\n  if (introPosition < screenPosition) {\n    serviceContainer.classList.add('appear');\n  }\n\n  if (midPosition < screenPosition) {\n    midContainer.classList.add('appear');\n  }\n\n  if (processPosition < screenPosition) {\n    processBox.classList.add('appear');\n  }\n\n  if (brandPosition < screenPosition) {\n    brandText.classList.add('appear');\n  }\n} // add event listener\n\n\nwindow.addEventListener('scroll', scrollAppear);\n\n//# sourceURL=webpack:///./assets/js/main.js?");
+    }
+});
